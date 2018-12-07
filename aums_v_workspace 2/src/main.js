@@ -2,6 +2,7 @@ require('babel-polyfill'); // es6  应用程序的入口点使用ES6的语法，
 
 import '@/utils/getGlobalParams'
 import 'font-awesome/css/font-awesome.min.css'
+//
 
 document.addEventListener('ready', () => {
   require('./app-main')
