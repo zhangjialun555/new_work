@@ -1,0 +1,5 @@
+addInParameter;添加输入物料标签页
+addOutParameter;添加输出物料标签页
+modeManage;物料模式管理
+queryParameterDetail;物料详细信息
+

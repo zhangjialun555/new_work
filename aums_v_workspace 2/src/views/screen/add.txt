@@ -1,0 +1,270 @@
+ <el-carousel-item  :key="item" class="item">
+            <div class="content_tittle">
+              <div class="c_tittle">
+                <span v-text="content_tittle"></span>
+              </div>
+            </div>
+            <div class="content_bottom">
+              <img class="content_bg" src="../../../static/logo/contentBg.png" >
+              <!-- 存放表格数据 -->
+              <div class="content_table">
+                 <!-- 可收物料 -->
+                  <el-card shadow="hover" class="table_card">
+                    <el-row :gutter="10">
+          <el-col :md="12" :lg="12">
+             <div  class="table_tittle">
+               <!-- <div class="little_block"></div> -->
+          <span>设备可收物料</span><br><br>
+        </div>
+        <el-table 
+        :data="newDevGetMatlList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="设备名" >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Card"  label="卡" min-width="20%"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Card" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Cert"  label="身份证" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Cert" width="15" height="15"/>
+            </template>
+        </el-table-column>
+      </el-table>
+          </el-col>
+          <el-col :md="12" :lg="12">
+             <div class="table_tittle" >
+          <span>设备可付物料</span><br><br>
+        </div>
+        <el-table 
+        :data="newDevPutMatlList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="设备名" >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou001"  label="普卡"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou001" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou002"  label="金卡" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou002" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou003"  label="白金卡" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou003" width="15" height="15"/>
+            </template>
+        </el-table-column>
+      </el-table>
+          </el-col>
+        </el-row>
+       <br>
+      <el-row :gutter="10">
+          <el-col :md="12" :lg="12">
+             <div  class="table_tittle">
+          <span>交割柜可收物料</span><br><br>
+        </div>
+        <el-table 
+        :data="newTlrGetMatlList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="交割柜台" >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Card"  label="卡"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Card" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Cert"  label="身份证" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Cert" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou008"  label="存单" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou008" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Cash"  label="现金" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Cash" width="15" height="15"/>
+            </template>
+        </el-table-column>
+      </el-table>
+          </el-col>
+          <el-col :md="12" :lg="12">
+             <div class="table_tittle" >
+          <span>交割柜可付物料</span><br><br>
+        </div>
+        <el-table 
+        :data="newTlrPutMatlList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="交割柜台" >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou001"  label="普卡"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou001" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou002"  label="金卡" >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou002" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou003"  label="白金卡"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou003" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Vou008"  label="存单"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Vou008" width="15" height="15"/>
+            </template>
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Cash"  label="现金"  >
+            <template slot-scope="scope" >
+              <img :src="scope.row.Cash" width="15" height="15"/>
+            </template>
+        </el-table-column>
+      </el-table>
+          </el-col>
+        </el-row>
+                  </el-card>
+              </div>
+            </div>
+          </el-carousel-item>
+          <!-- 设备状态 -->
+          <el-carousel-item  :key="item" class="item">
+            <div class="content_tittle">
+              <div class="c_tittle">
+                <span v-text="content_tittle1"></span>
+              </div>
+            </div>
+            <div class="content_bottom">
+              <img class="content_bg" src="../../../static/logo/contentBg.png" >
+              <!-- 存放表格数据 -->
+              <div class="content_table">
+                 <!-- 可收物料 -->
+                  <el-card shadow="hover" class="table_card">
+                    <el-row :gutter="10">
+          <el-col :md="24" :lg="24">
+             <div  class="table_tittle">
+          <span>设备状态</span><br><br>
+        </div>
+        <el-table 
+        :data="DeviceList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="deviceName" label="设备" width="150px">
+        </el-table-column>
+        <el-table-column align="center"
+            prop="deviceStatus"  label="设备状态" width="150px">
+        </el-table-column>
+        <el-table-column align="center"
+            prop="deviceErrMessage"  label="异常提示" >
+        </el-table-column>
+      </el-table>
+          </el-col>
+        </el-row>
+       <br>
+      <el-row :gutter="10">
+          <el-col :md="24" :lg="24">
+             <div  class="table_tittle">
+          <span>交割柜状态</span><br><br>
+        </div>
+        <el-table 
+        :data="TellerList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="柜员名" >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="TellerStatus"  label="柜员状态"  >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="TellerPost"  label="柜员岗位" >
+        </el-table-column>
+      </el-table>
+          </el-col>
+        </el-row>
+        </el-card>
+              </div>
+            </div>
+          </el-carousel-item>
+          <!-- 库箱状态 -->
+          <el-carousel-item  :key="item" class="item">
+            <div class="content_tittle">
+              <div class="c_tittle">
+                <span v-text="content_tittle2"></span>
+              </div>
+            </div>
+            <div class="content_bottom">
+              <img class="content_bg" src="../../../static/logo/contentBg.png" >
+              <!-- 存放表格数据 -->
+              <div class="content_table">
+                 <!-- 可收物料 -->
+                  <el-card shadow="hover" class="table_card">
+                    <el-row :gutter="10">
+          <el-col :md="24" :lg="24">
+             <div  class="table_tittle">
+          <span>设备状态</span><br><br>
+        </div>
+        <el-table 
+        :data="VouList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="交割柜/设备" width="150px">
+        </el-table-column>
+        <el-table-column align="center"
+            prop="VouType"  label="凭证类型" width="150px">
+        </el-table-column>
+        <el-table-column align="center"
+            prop="VouNum"  label="可用凭证张数" >
+        </el-table-column>
+      </el-table>
+          </el-col>
+        </el-row>
+       <br>
+      <el-row :gutter="10">
+          <el-col :md="24" :lg="24">
+             <div  class="table_tittle">
+          <span>现金信息</span><br><br>
+        </div>
+        <el-table 
+        :data="CashList"
+         style="width: 100%;" :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass">
+        <el-table-column align="center"
+            prop="TellerName" label="交割柜/设备" >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="Ccy"  label="币种"  >
+        </el-table-column>
+        <el-table-column align="center"
+            prop="AvailAmt"  label="可用现金" >
+        </el-table-column>
+      </el-table>
+          </el-col>
+        </el-row>
+        </el-card>
+              </div>
+            </div>
+          </el-carousel-item>
