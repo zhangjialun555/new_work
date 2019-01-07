@@ -296,13 +296,19 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/versionManage/versionFileUpload',
     name: 'version-manage',
-    meta: { title: '版本管理', icon: 'version', roles: ['Menu_VersionFileUpload', 'Menu_VersionReleaseList', 'Menu_VersionRetreat', 'Menu_VersionReleaseHistory', 'Menu_VersionTemplateMaintenance'] },
+    meta: { title: '版本管理', icon: 'version', roles: ['Menu_VersionFileUpload', 'Menu_VersionFileUpload1', 'Menu_VersionReleaseList', 'Menu_VersionRetreat', 'Menu_VersionReleaseHistory', 'Menu_VersionTemplateMaintenance'] },
     children: [
       {
         path: 'versionFileUpload',
         name: 'version-file-upload',
         component: () => import('@/views/version-manage/version-file-upload/versionFileUpload'),
         meta: { title: '版本文件管理', roles: ['Menu_VersionFileUpload'] }
+      },
+      {
+        path: 'versionFileUpload1',
+        name: 'vversionFileUpload1',
+        component: () => import('@/views/version-manage/version-file-upload/versionFileUpload1'),
+        meta: { title: 'my-版本文件管理', roles: ['Menu_VersionFileUpload1'] }
       },
       {
         path: 'versionReleaseList',
@@ -616,6 +622,12 @@ export const asyncRouterMap = [
         component: () => import('@/views/video-manage/meetingMsgQuery/meetingMsgQuery'),
         meta: { title: '会议信息查询', roles: ['Menu_DradeMonitor'] }
       },
+      {
+        path: 'meetingMsgQuery1',
+        name: 'meetingMsgQuery1',
+        component: () => import('@/views/video-manage/meetingMsgQuery/meetingMsgQuery1'),
+        meta: { title: 'my会议信息查询', roles: ['Menu_DradeMonitor'] }
+      },
       // {
       //   path: 'ScreenFileAccess',
       //   name: 'ScreenFileAccess',
@@ -627,6 +639,12 @@ export const asyncRouterMap = [
         name: 'meetingStatisticsAnalysis',
         component: () => import('@/views/video-manage/meetingStatisticsAnalysis/meetingStatisticsAnalysis'),
         meta: { title: '会议统计分析', roles: ['Menu_DradeMonitor'] }
+      },
+      {
+        path: 'meetingStatisticsAnalysis1',
+        name: 'meetingStatisticsAnalysis1',
+        component: () => import('@/views/video-manage/meetingStatisticsAnalysis/meetingStatisticsAnalysis1'),
+        meta: { title: 'my会议统计分析', roles: ['Menu_DradeMonitor'] }
       }
     ]
   },

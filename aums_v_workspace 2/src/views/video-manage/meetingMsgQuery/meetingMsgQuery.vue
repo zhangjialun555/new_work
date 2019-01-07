@@ -95,34 +95,6 @@
             <el-table-column prop='CONFER2IP' label='参会者2IP' min-width="120"></el-table-column>
             <el-table-column prop='CONFER2NAME' label='参会者2编号'></el-table-column>
 
-            <!-- <el-table-column prop='CONFER1' label='参会者1编号'></el-table-column>
-            <el-table-column prop='CONFER1NAME' label='参会者1姓名'></el-table-column>
-            <el-table-column prop='CONFER1STATUS' label='参会者1状态'></el-table-column>
-            <el-table-column prop='CONFER1IP' label='参会者1IP'></el-table-column>
-            <el-table-column prop='CONFER1INTIME' label='参会者1进入时间'></el-table-column>
-            <el-table-column prop='CONFER1OUTTIME' label='参会者1离开时间'></el-table-column>
-
-            <el-table-column prop='CONFER2' label='参会者2编号'></el-table-column>
-            <el-table-column prop='CONFER2NAME' label='参会者2姓名'></el-table-column>
-            <el-table-column prop='CONFER2STATUS' label='参会者2状态'></el-table-column>
-            <el-table-column prop='CONFER2IP' label='参会者2IP'></el-table-column>
-            <el-table-column prop='CONFER2INTIME' label='参会者2进入时间'></el-table-column>
-            <el-table-column prop='CONFER2OUTTIME' label='参会者2离开时间'></el-table-column>
-
-            <el-table-column prop='CONFER3' label='参会者3编号'></el-table-column>
-            <el-table-column prop='CONFER3NAME' label='参会者3姓名'></el-table-column>
-            <el-table-column prop='CONFER3STATUS' label='参会者3状态'></el-table-column>
-            <el-table-column prop='CONFER3IP' label='参会者3IP'></el-table-column>
-            <el-table-column prop='CONFER3INTIME' label='参会者3进入时间'></el-table-column>
-            <el-table-column prop='CONFER3OUTTIME' label='参会者3离开时间'></el-table-column>
-
-            <el-table-column prop='FLFLAG' label='音视分离标志'></el-table-column>
-            <el-table-column prop='VIDEOFILENAME' label='视频文件名'></el-table-column>
-            <el-table-column prop='VIDEOUSERID' label='视频创建ID'></el-table-column>
-            <el-table-column prop='DEALCODE' label='处理代码'></el-table-column>
-            <el-table-column prop='DEALMSG' label='处理信息'></el-table-column>
-            <el-table-column prop='LASTACTIVETIME' label='最后活跃时间'></el-table-column>
-            <el-table-column prop='CONFERTYPE' label='会话类型'></el-table-column> -->
 
             <el-table-column label='操作' align="center" fixed="right" width="120">
               <template slot-scope="scope">

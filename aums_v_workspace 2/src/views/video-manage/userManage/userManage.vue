@@ -1,5 +1,6 @@
 <template>
   <div class="type-info-manage" v-loading="loading" element-loading-text="加载中。。。">
+    <span :text="content">ck</span>
     <el-card>
       <el-form :model="queryForm" ref="queryForm" size="mini" label-position="top">
         <el-row :gutter="10">
@@ -161,6 +162,8 @@
     ></component>
     <component :is="dialogList.modifyUser" :option="dialogListModifyUser" @refreshTable="queryUser"></component>
   </div>
+
+  
 </template>
 
 <script>
@@ -184,6 +187,7 @@ export default {
   data() {
     return {
       //页面公用
+      content:"11",
       loading: "",
       configDataHash: { CONFIGID: "", CONFIGNAME: "" },
       styleDataHash: { LAYOUNAME: "", LAYOUTID: "" },
